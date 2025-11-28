@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/chatbot/message"; // Change to your backend URL
+const API_URL = "https://mental-health-chatbot-backend-teal.vercel.app/api/chatbot/message"; // production backend
 
 export async function sendMessage(message: string) {
   const response = await fetch(API_URL, {
