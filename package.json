@@ -36,6 +36,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": "22.x"
+  },
   "devDependencies": {
     "@types/react": "^19.2.7"
   }
