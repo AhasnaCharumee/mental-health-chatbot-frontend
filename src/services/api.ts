@@ -1,4 +1,11 @@
-const API_URL = "https://mental-health-chatbot-backend-teal.vercel.app/api/chatbot/message"; // production backend
+// Use `REACT_APP_API_URL` to switch deployments without changing code.
+// Example .env: REACT_APP_API_URL=https://mental-health-chatbot-backend-2gkdsynyr.vercel.app
+const DEFAULT_BACKEND =
+  process.env.REACT_APP_API_URL ||
+  "https://mental-health-chatbot-backend-teal.vercel.app" ||
+  "https://mental-health-chatbot-backend-2gdsynyr.vercel.app";
+
+const API_URL = `${DEFAULT_BACKEND.replace(/\/$/, "")}/api/chatbot/message`;
 
 export async function sendMessage(message: string) {
   const response = await fetch(API_URL, {
