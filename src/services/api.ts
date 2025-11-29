@@ -2,7 +2,8 @@ const API_BASE =
   process.env.REACT_APP_API_URL ||
   "https://mental-health-backend-rk06xwmds-charumeeahasna-3998s-projects.vercel.app";
 
-const API_URL = `${API_BASE.replace(/\/$/, "")}/api/chatbot/message`;
+export const API_URL =
+  `${process.env.REACT_APP_API_URL}/api/chatbot/message`;
 
 
 export async function sendMessage(message: string) {
