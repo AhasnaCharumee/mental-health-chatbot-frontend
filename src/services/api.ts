@@ -1,8 +1,9 @@
-const DEFAULT_BACKEND =
-  process.env.REACT_APP_API_URL?.trim() ||
-  "https://mental-health-chatbot-backend-teal.vercel.app";
+const API_BASE =
+  process.env.REACT_APP_API_URL ||
+  "https://mental-health-backend-rk06xwmds-charumeeahasna-3998s-projects.vercel.app";
 
-const API_URL = `${DEFAULT_BACKEND.replace(/\/$/, "")}/api/chatbot/message`;
+const API_URL = `${API_BASE.replace(/\/$/, "")}/api/chatbot/message`;
+
 
 export async function sendMessage(message: string) {
   const response = await fetch(API_URL, {
